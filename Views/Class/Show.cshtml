@@ -1,0 +1,18 @@
+﻿@model Assign3.Models.Class
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<a class="navlink" href="/Class/List">Back to Classes</a>
+
+    <div id="containershow">
+        <h2>@Model.ClassName</h2>
+        <img src="~/Content/images/class.png" />
+        <div id="content">
+            <p>The class ID is @Model.ClassId </p>
+            <p>The class code is: @Model.ClassCode</p>
+            <p>The class start date is: @Model.ClassStartdate</p>
+            <p>The class finish date is: @Model.ClassFinishdate</p>
+        </div>
+    </div>

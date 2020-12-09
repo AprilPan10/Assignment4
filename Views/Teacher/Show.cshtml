@@ -1,0 +1,33 @@
+﻿@model Assign3.Models.Teacher
+
+@{
+    ViewBag.Title = "Show";
+}
+
+
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Teacher/List">Back to Teachers</a>
+
+    </nav>
+    <h2>@Model.TeacherFname @Model.TeacherLname</h2>
+    <img src="~/Content/images/teacher.png" />
+    <div id="content">
+        <p>The teacher's ID is @Model.TeacherId </p>
+        <p>The teacher's empolyee number is: @Model.TeacherEmployeenumber</p>
+        <p>The teacher's hire date is: @Model.TeacherHiredate.ToString("dd-MMM-yyyy")</p>
+        <p>The teacher's salary is: @Model.TeacherSalary</p>
+        <p>The teacher is teach:<a href="/Class/Show/@Model.ClassId">@Model.ClassName</a></p>
+    </div>
+    <div class="to-link">
+        <a class="btn btn-default" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete</a>
+        <a class="btn btn-default" href="/Teacher/Update/@Model.TeacherId">Update</a>
+    </div>
+    
+</div>
+
+
+
+
+

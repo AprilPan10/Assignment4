@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Ajax_New";
+}
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Teacher/List">Back To Teachers</a>
+    </nav>
+    <h2>New Teacher</h2>
+    @{
+        /* AJAX Request to add teacher!!! */
+        /* No form submission needed */
+        /* button onclick will handle form submission */
+        /* Each item has an ID for validation && ajax submission */
+
+
+    }
+    <form method="POST" action="/Teacher/Create" name="form_contact" class="add-form">
+        <div class="inputrow">
+            <div>
+                <label for="TeacherFname">First Name:</label>
+            </div>
+           
+            <input type="text" id="TeacherFname" name="TeacherFname" />
+
+        </div>
+        <div class="inputrow">
+            <div>
+                <label for="TeacherLname">Last Name:</label>
+            </div>
+            <input type="text" id="TeacherLname" name="TeacherLname" />
+
+        </div>
+        <div class="inputrow">
+            <div>
+                <label for="TeacherEmployeenumber">Employee Number:</label>
+            </div>
+            
+            <input type="text" id="TeacherEmployeenumber" name="TeacherEmployeenumber" />
+        </div>
+        <div class="inputrow">
+            <div>
+                <label for="TeacherHiredate">Hire Date:</label>
+            </div>
+       
+            <div>
+                <input id="TeacherHiredate" name="TeacherHiredate" />
+            </div>
+        </div>
+        <div class="inputrow">
+            <div>
+                <label for="TeacherSalary">Salary:</label>
+            </div>
+            
+            <div>
+                <input id="TeacherSalary" name="TeacherSalary" />
+            </div>
+        </div>
+        @{
+            //AddTeacher() is a JS method defined in /Scripts/teacher.js
+        }
+    <div class="add-button">
+        <button class="btn btn-default" onclick="AddTeacher();">Add Teacher</button>
+    </div>
+        
+
+
+    </form>
+    </div>
+

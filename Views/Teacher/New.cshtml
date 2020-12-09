@@ -1,0 +1,41 @@
+﻿@model Assign3.Models.Teacher
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>New Teacher</h2>
+<form method="POST" action="/Teacher/List" class="add-form">
+    <div>
+        <label for="TeacherLname">First Name:</label>
+        /*try to do validation*/
+        @Html.ValidationMessageFor(model => model.TeacherFname, "", new { @class = "text-danger" })
+        <input type="text" id="TeacherLname" name="TeacherLname" />
+    </div>
+    <div>
+        <label for="TeacherFname">Last Name:</label>
+        @Html.ValidationMessageFor(model => model.TeacherLname, "", new { @class = "text-danger" })
+        <input type="text" id="TeacherFname" name="TeacherFname" />
+    </div>
+    <div>
+        <label for="TeacherEmployeenumber">Employee Number:</label>
+        <input type="text" id="TeacherEmployeenumber" name="TeacherEmployeenumber" />
+    </div>
+    <div>
+        <label for="TeacherHiredate">Hire Date:</label>
+        <input type="datetime" id="TeacherHiredate" name="TeacherHiredate" />
+    </div>
+    <div>
+        <label for="TeacherSalar">Salary:</label>
+        <input type="number" id="TeacherSalary" name="TeacherSalary" />
+    </div>
+    <div>
+        <input type="submit" class="btn btn-default" value="Create Teacher" />
+    </div>
+</form>
+
+
+
+
+
+
+

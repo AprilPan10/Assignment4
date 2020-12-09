@@ -1,0 +1,19 @@
+﻿@model Assign3.Models.Student
+@{
+    ViewBag.Title = "Show";
+}
+
+
+    <a class="navlink" href="/Student/List">Back to Students</a>
+    <div id="containershow">
+        <h2>@Model.StudentFname @Model.StudentLname</h2>
+        <img src="~/Content/images/student.png" />
+        <div id="content">
+            <p>The student ID is @Model.StudentId </p>
+            <p>The student student number is: @Model.StudentStudentnumber</p>
+            <p>The student enrol date is: @Model.StudentEnroldate</p>
+        </div>
+    </div>
+
+
+

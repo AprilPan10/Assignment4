@@ -1,0 +1,53 @@
+﻿@model Assign3.Models.Teacher
+@{
+    ViewBag.Title = "Update";
+}
+
+
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Teacher/Show/@Model.TeacherId">Back</a>
+    </nav>
+    <h2>Update Teacher</h2>
+    <form method="POST" action="/Teacher/Update/@Model.TeacherId">
+        <div class="inputrow">
+            <label for="TeacherFname">First Name:</label>
+            <div>
+                <input type="text" id="TeacherFname" name="TeacherFname" value="@Model.TeacherFname" />
+            </div>
+            
+
+        </div>
+        <div class="inputrow">
+            <label for="TeacherLname">Last Name:</label>
+            <div>
+                <input type="text" id="TeacherLname" name="TeacherLname" value="@Model.TeacherLname" />
+            </div>
+            
+
+        </div>
+        <div class="inputrow">
+            <label for="TeacherEmployeenumber">Employee Number:</label>
+            <div>
+                <input type="text" id="TeacherEmployeenumber" name="TeacherEmployeenumber" value="@Model.TeacherEmployeenumber" />
+            </div>
+           
+        </div>
+        <div class="inputrow">
+            <label for="TeacherHiredate">Hire Date:</label>
+            <div>
+                <textarea id="TeacherHiredate" name="TeacherHiredate">@Model.TeacherHiredate</textarea>
+            </div>
+        </div>
+        <div class="inputrow">
+            <label for="TeacherSalary">Salary:</label>
+            <div>
+                <textarea id="TeacherSalary" name="TeacherSalary">@Model.TeacherSalary</textarea>
+            </div>
+        </div>
+        <div class="inputrow">
+            <input type="submit" class="btn btn-default" value="Update Teacher" />
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Assign3.Models.Teacher>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>This page should be showing information about all teachers</p>
+<form action="~/Teacher/List/" method="get">
+    <input type="text" name="SearchKey" autocomplete="off" />
+    <input type="submit" value="View the teacher!" class="btn btn-default" />
+
+</form>
+
+
+
+
+@foreach (var teacher in Model)
+{
+    <div><a href="/Teacher/Show/@teacher.TeacherId">@teacher.TeacherFname @teacher.TeacherLname</a></div>
+
+
+}
+
+<nav>
+    <a class="btn btn-primary btn-lg" href="/Teacher/Ajax_New">New Teacher</a>
+</nav>
+
